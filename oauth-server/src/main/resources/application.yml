@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: oauth-server
+  redis:
+    database: 8
+    host: 192.168.1.190
+    password:
+    port: 6379
+    timeout: 3000
+    jedis:
+      pool:
+        max-idle: 20
+        min-idle: 5
+        max-active: 200
+        max-wait: 1000
+  security:
+    user:
+      name: user
+      password: user
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+    fetch-registry: true
+    register-with-eureka: true

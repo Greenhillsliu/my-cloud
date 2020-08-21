@@ -1,0 +1,17 @@
+server:
+  port: 9902
+spring:
+  application:
+    name: my-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: oauth-resource
+          uri: lb://oauth-resource
+          predicates: path=/resource/**
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8000/eureka/

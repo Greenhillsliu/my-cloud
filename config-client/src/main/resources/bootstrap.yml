@@ -1,0 +1,19 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      uri: http://localhost:8083/
+  profiles:
+    active: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+bussiness:
+  name: haha
+
